@@ -17,7 +17,5 @@ def translate_text(text: str, lang_in: str, lang_out: str) -> str:
     }
 
     response = requests.request("POST", url, data=payload.encode('utf-8'), headers=headers).json()
+
     return response['data']['translations'][0]['translatedText']
-
-
-

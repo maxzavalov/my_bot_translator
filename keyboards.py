@@ -1,5 +1,4 @@
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, KeyboardButton, ReplyKeyboardMarkup, \
-    ReplyKeyboardRemove
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, KeyboardButton, ReplyKeyboardMarkup
 
 lang_keys = ['ar', 'az', 'be', 'bg', 'ca', 'cs', 'el', 'en', 'eu', 'fi', 'fr', 'gn', 'he', 'hi', 'hr', 'hy', 'ja', 'ka',
              'kk', 'ko', 'la', 'pl', 'pt', 'es', 'sv', 'tr', 'uk', 'zh']
@@ -23,7 +22,7 @@ def create_kb(buttons: list) -> InlineKeyboardMarkup():
 
 default_kb = create_kb(lang_keys).insert(InlineKeyboardButton(text='Закончить', callback_data='cancel'))
 
-menu_kb = ReplyKeyboardMarkup(resize_keyboard=True)
+menu_kb = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True)
 menu_kb.add(KeyboardButton(
     text='/добавить_язык')).add(KeyboardButton(
     text='/перевод')).add(KeyboardButton(
