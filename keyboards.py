@@ -28,6 +28,5 @@ menu_kb.add(KeyboardButton(
     text='/перевод')).add(KeyboardButton(
     text='/удалить_язык'))
 
-
 ask_to_continue = ReplyKeyboardMarkup(resize_keyboard=True)
 ask_to_continue.add(KeyboardButton(text='/продолжить')).add(KeyboardButton(text='/закончить'))

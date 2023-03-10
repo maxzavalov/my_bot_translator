@@ -51,7 +51,7 @@ async def translate_message(message: types.Message, state: FSMContext) -> None:
 
 
 def register_handler_translate(dp: Dispatcher):
-    dp.register_message_handler(cmd_translate, commands=['translate'], state=None)
+    dp.register_message_handler(cmd_translate, commands=['перевод'], state=None)
     dp.register_callback_query_handler(current_lang, state=FSMTranslate.choice)
     dp.register_message_handler(cmd_continue, commands=['продолжить'], state=FSMTranslate.working)
     dp.register_message_handler(cmd_cancel, commands=['закончить'], state=FSMTranslate.working)
